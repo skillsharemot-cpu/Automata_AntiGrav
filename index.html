@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ultimat AV | Prémium High-End Audio</title>
+    <meta name="description" content="Fedezze fel a legkiválóbb high-end audió rendszereket, többek között az Avantgarde Acoustic Colibri és Amphion hangfalakat.">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- Header -->
+    <header class="navbar">
+        <div class="logo">ULTIMAT <span>AV</span></div>
+        <nav>
+            <a href="#about">Rólunk</a>
+            <a href="#brands">Márkák</a>
+            <a href="#products">Termékek</a>
+            <a href="#contact" class="btn-primary">Kapcsolat</a>
+        </nav>
+    </header>
+
+    <!-- Section 1: Bemutatkozó szöveg (Hero) -->
+    <section id="about" class="hero fade-in">
+        <div class="hero-content">
+            <h1>Tapasztalja Meg A Tökéletes Hangzást</h1>
+            <p>Fedezze fel a kompromisszummentes high-end audió világát. Elhozzuk otthonába a legtisztább hangélményt a világ legkiválóbb prémium márkáival, mint a <strong>Colibri</strong> széria az Avantgarde Acoustic-tól.</p>
+            <a href="#products" class="btn-primary btn-large">Kínálatunk Megtekintése</a>
+        </div>
+    </section>
+
+    <!-- Section 2: Márkák -->
+    <section id="brands" class="brands-section fade-in">
+        <h2 class="section-title">Kiemelt Márkáink</h2>
+        <div class="brands-country-container">
+            <div class="brand-column">
+                <div class="brand-country-box">
+                    <div class="brand-name">DLS</div>
+                    <div class="brand-country">SVÉDORSZÁG</div>
+                </div>
+                <div class="tp-placeholder" id="tp-widget-dls">
+                    <img src="https://cdn.trustpilot.net/brand-assets/4.1.0/logo-black.svg" alt="Trustpilot" class="tp-logo-small">
+                    <div class="stars-small"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                </div>
+            </div>
+            <div class="brand-column">
+                <div class="brand-country-box active">
+                    <div class="brand-name">Colibri</div>
+                    <div class="brand-country">NÉMETORSZÁG</div>
+                </div>
+                <div class="tp-placeholder" id="tp-widget-colibri">
+                    <img src="https://cdn.trustpilot.net/brand-assets/4.1.0/logo-black.svg" alt="Trustpilot" class="tp-logo-small">
+                    <div class="stars-small"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                </div>
+            </div>
+            <div class="brand-column">
+                <div class="brand-country-box">
+                    <div class="brand-name">Amphion</div>
+                    <div class="brand-country">FINNORSZÁG</div>
+                </div>
+                <div class="tp-placeholder" id="tp-widget-amphion">
+                    <img src="https://cdn.trustpilot.net/brand-assets/4.1.0/logo-black.svg" alt="Trustpilot" class="tp-logo-small">
+                    <div class="stars-small"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 3: Termékek -->
+    <section id="products" class="products-section fade-in">
+        <h2 class="section-title">Kiemelt Termékeink</h2>
+        
+        <div class="brand-showcases-container">
+            <!-- Brand 1: Avantgarde -->
+            <div class="brand-showcase fade-in">
+                <div class="brand-intro text-center">
+                    <div class="brand-intro-country">NÉMETORSZÁG</div>
+                    <h3 class="brand-intro-name">Avantgarde Acoustic</h3>
+                    <div class="brand-intro-slogan">Az érzelem és a dinamika megtestesítője</div>
+                    <p class="brand-intro-desc">Több mint 30 éves kürtős technológia, páratlan hatásfok és olyan zenei élmény, amely az első pillanattól rabul ejti a hallgatót. Tapasztalja meg a kompromisszummentes energiát.</p>
+                </div>
+                <div class="product-card full-width" onclick="openProductModal('colibri')">
+                    <div class="product-image-box wide">
+                        <img src="file:///C:/Users/User/.gemini/antigravity/brain/112c6c51-3c48-4f17-b182-ffd2892ca8cd/colibri_speaker_black_1775135257235.png" alt="Avantgarde Acoustic Colibri">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Brand 2: Amphion -->
+            <div class="brand-showcase fade-in">
+                <div class="brand-intro text-center">
+                    <div class="brand-intro-country">FINNORSZÁG</div>
+                    <h3 class="brand-intro-name">Amphion</h3>
+                    <div class="brand-intro-slogan">Természetes hangzás, skandináv elegancia</div>
+                    <p class="brand-intro-desc">A finn Amphion hangfalak páratlan tisztaságukról és természetes terükről ismertek. Tökéletes akusztikai integráció, amely felesleges színezés nélkül adja vissza a zene eredeti lelkét.</p>
+                </div>
+                <div class="product-card full-width" onclick="openProductModal('amphion')">
+                    <div class="product-image-box wide">
+                        <img src="file:///C:/Users/User/.gemini/antigravity/brain/112c6c51-3c48-4f17-b182-ffd2892ca8cd/colibri_speaker_lifestyle_1775135270632.png" alt="Amphion Krypton">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Brand 3: DLS -->
+            <div class="brand-showcase fade-in">
+                <div class="brand-intro text-center">
+                    <div class="brand-intro-country">SVÉDORSZÁG</div>
+                    <h3 class="brand-intro-name">DLS</h3>
+                    <div class="brand-intro-slogan">Minimalista dizájn, maximális hangzás</div>
+                    <p class="brand-intro-desc">Svéd precizitás 1979 óta. A Flatbox sorozat falra szerelhető hangszórói láthatatlanul olvadnak bele az otthonába — miközben gazdag, kiegyensúlyozott hangot adnak órákon át, fáradtság nélkül.</p>
+                </div>
+                <div class="product-card full-width" onclick="openProductModal('dls')">
+                    <div class="product-image-box wide">
+                        <img src="file:///C:/Users/User/.gemini/antigravity/brain/112c6c51-3c48-4f17-b182-ffd2892ca8cd/high_end_amplifier_1775135299041.png" alt="DLS Flatbox">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 4: Kapcsolat (Lead Form) -->
+    <section id="contact" class="contact-section fade-in">
+        <div class="contact-container">
+            <h2 class="section-title">Kérjen Ajánlatot / Időpontot</h2>
+            <p>Látogasson el bemutatótermünkbe, ahol testközelből is megtapasztalhatja a prémium hangást.</p>
+            
+            <form class="lead-form" onsubmit="event.preventDefault(); alert('Köszönjük! Munkatársunk hamarosan keresni fogja.');">
+                <div class="form-group">
+                    <label for="name">Név *</label>
+                    <input type="text" id="name" required placeholder="Az Ön neve">
+                </div>
+                <div class="form-group">
+                    <label for="email">E-mail cím *</label>
+                    <input type="email" id="email" required placeholder="pelda@email.hu">
+                </div>
+                <div class="form-group">
+                    <label for="phone">Telefonszám</label>
+                    <input type="tel" id="phone" placeholder="+36 30 123 4567">
+                </div>
+                <div class="form-group">
+                    <label for="interest">Érdeklődés tárgya</label>
+                    <select id="interest">
+                        <option value="colibri">Avantgarde Colibri széria</option>
+                        <option value="amphion">Amphion hangfalak</option>
+                        <option value="showroom">Showroom látogatás (Budapest)</option>
+                        <option value="other">Egyéb / Rendszertervezés</option>
+                    </select>
+                </div>
+                <button type="submit" class="btn-primary btn-submit">Ajánlatkérés elküldése</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 Ultimat AV Kft. | 1036 Budapest, Lajos u. 74-76.</p>
+    </footer>
+
+    <!-- Product Modal -->
+    <div id="product-modal" class="modal">
+        <div class="modal-content new-modal-layout">
+            <span class="close-modal close-modal-new" onclick="closeProductModal()"><i class="fas fa-times"></i></span>
+            <div class="modal-body-new">
+                <div class="modal-image-new">
+                    <img id="modal-img-src" src="" alt="Termék fótó">
+                </div>
+                <div class="modal-info-new">
+                    <div id="modal-subtitle" class="modal-subtitle">AVANTGARDE ACOUSTIC · NÉMETORSZÁG</div>
+                    <h2 id="modal-title">Termék Neve</h2>
+                    <p id="modal-desc" class="modal-desc-text">Leírás...</p>
+                    <p id="modal-specs" class="modal-specs-text">Személyre szabott opciók...</p>
+                    
+                    <hr class="modal-separator">
+                    
+                    <div class="modal-footer-cta">
+                        <span class="modal-cta-text">Prémium kategória · Kérjen árajánlatot</span>
+                        <button class="btn-primary modal-action-btn" onclick="closeProductModal(); location.href='#contact'">ÉRDEKLŐDÖM</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- AI Chat Widget -->
+    <div class="chat-widget-container">
+        <button class="chat-toggle" onclick="toggleChat()">
+            <i class="fas fa-comment-dots"></i>
+        </button>
+        <div class="chat-window" id="chat-window">
+            <div class="chat-header">
+                <div>
+                    <i class="fas fa-robot"></i> Ultimat AV Asszisztens
+                </div>
+                <span class="close-chat" onclick="toggleChat()">&times;</span>
+            </div>
+            <div class="chat-body" id="chat-body">
+                <div class="message md-bot">Üdvözlöm! Miben segíthetek? Érdeklődik valamelyik hangfalunk (pl. a Colibri) iránt, vagy szeretne időpontot foglalni bemutatótermünkbe?</div>
+            </div>
+            <div class="chat-footer">
+                <input type="text" id="chat-input" placeholder="Írjon üzenetet..." onkeypress="handleChatEnter(event)">
+                <button onclick="sendChatMessage()"><i class="fas fa-paper-plane"></i></button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
