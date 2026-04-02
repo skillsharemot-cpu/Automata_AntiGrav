@@ -134,16 +134,14 @@ function handleAiResponse(userText) {
     let isHtml = false;
     
     if (chatStep === 0) {
-        response = "Köszönöm! Mielőtt egyedi javaslatot adnánk, megkérdezhetem, hol hallott rólunk vagy a termékeinkről (esetleg ismerős ajánlotta)?";
+        response = "Köszönöm! Nagyszerű az irány. Hogy minél pontosabban tudjunk tervezni, megkérdezhetem, hogy melyik városba és körülbelül mekkora helyiségbe (nappali, dedikált zeneszoba) tervezi a hangrendszer telepítését?";
         chatStep++;
     } else if (chatStep === 1) {
-        response = "Érthető. Tervez esetleg a kezdeti elképzeléséhez képest feljebb lépni kategóriában, hogy egy abszolút kompromisszummentes rendszert kapjon, vagy szigorúan a kiválasztott keretek között maradjunk?";
+        response = `Köszönöm a részleteket. Amennyiben igényt tart rá, lehetősége nyílik a kiválasztott terméken felül más prémium alternatívákat is meghallgatni bemutatótermünkben.<br><br>Ha nyitott rá, a későbbiekben e-mailben is szívesen elküldjük Önnek a javasolt termékek listáját, ezzel is segítve a tökéletes választást. Egyébként szabad megkérdeznem, hogy hol hallott rólunk vagy a márkáinkról először?`;
+        isHtml = true;
         chatStep++;
     } else if (chatStep === 2) {
-        response = "Rendben. Melyik városba és körülbelül mekkora helyiségbe (nappali, dedikált zeneszoba) tervezi a hangrendszer telepítését?";
-        chatStep++;
-    } else if (chatStep === 3) {
-        response = `Nagyszerű! A leírtak alapján testreszabott prémium megoldásaink ideálisak lesznek. Szeretné megtapasztalni rendszerünket élőben is exkluzív budapesti Showroomunkban?<br><br>
+        response = `Rendben, köszönöm az információkat! Szeretné megtapasztalni az audió rendszert élőben is exkluzív budapesti Showroomunkban?<br><br>
         Kérem, válassza ki nagyjából, mikor lenne a legalkalmasabb egy zártkörű demóra:
         <div class="chat-btn-group">
             <button class="chat-btn" onclick="sendCustomMessage('Ezen a héten')">Ezen a héten</button>
@@ -152,11 +150,11 @@ function handleAiResponse(userText) {
         </div>`;
         isHtml = true;
         chatStep++;
-    } else if (chatStep === 4) {
-        response = "Tökéletes! Kérem, adja meg a **telefonszámát és e-mail címét** együttesen egy üzenetben, hogy vezető tanácsadó kollégánk kereshesse az időpont egyeztetése és a rendszer finomhangolása céljából.";
+    } else if (chatStep === 3) {
+        response = "Tökéletes! Kérem, adja meg a **telefonszámát és e-mail címét** együttesen egy üzenetben, hogy munkatársunk kereshesse az időpont egyeztetése és az esetleges javasolt listák átküldése céljából.";
         chatStep++;
     } else {
-        response = "Köszönjük a bizalmát! Minden információt sikeresen rögzítettünk. Munkatársunk rövidesen telefonon jelentkezik a részletekkel. Váruk szeretettel bemutatótermünkben!";
+        response = "Köszönjük a bizalmát! Minden információt sikeresen rögzítettünk. Kollégánk rövidesen jelentkezik. Váruk szeretettel!";
     }
     
     addMessage(response, 'bot', isHtml);
