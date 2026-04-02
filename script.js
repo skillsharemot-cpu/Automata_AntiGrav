@@ -114,28 +114,56 @@ function sendChatMessage() {
     }, 1000);
 }
 
-function addMessage(text, sender) {
+function addMessage(text, sender, isHtml = false) {
     const div = document.createElement('div');
     div.classList.add('message');
     div.classList.add(sender === 'user' ? 'md-user' : 'md-bot');
-    div.textContent = text;
+    
+    if (isHtml) {
+        div.innerHTML = text;
+    } else {
+        div.textContent = text;
+    }
+    
     chatBody.appendChild(div);
     chatBody.scrollTop = chatBody.scrollHeight;
 }
 
 function handleAiResponse(userText) {
-    let response = "Köszönöm érdeklődését! Munkatársunk hamarosan keresni fogja. Szeretne addig egy időpontot egyeztetni a bemutatóterembe?";
+    let response = "";
+    let isHtml = false;
     
-    // Simple state machine mimicking the sketch: Cél: Érdeklődés, Árajánlat, Helység nagysága -> Javaslat -> Időpont
     if (chatStep === 0) {
-        response = "Értem. Mielőtt pontos javaslatot és árajánlatot tudnék adni, megkérdezhetem, körülbelül mekkora az a helyiség (nappali, zene szoba), ahová a rendszert tervezi?";
+        response = "Köszönöm! Mielőtt egyedi javaslatot adnánk, megkérdezhetem, hol hallott rólunk vagy a termékeinkről (esetleg ismerős ajánlotta)?";
         chatStep++;
     } else if (chatStep === 1) {
-        response = "Köszönöm! Ehhez a mérethez nagyszerűen illene az Avantgarde Colibri vagy egy megfelelő teljesítményű Amphion rendszer. Szeretné meghallgatni budapesti showroomunkban? Kérem, adjon meg egy Önnek alkalmas időpontot és egy e-mail címet a véglegesítéshez.";
+        response = "Érthető. Tervez esetleg a kezdeti elképzeléséhez képest feljebb lépni kategóriában, hogy egy abszolút kompromisszummentes rendszert kapjon, vagy szigorúan a kiválasztott keretek között maradjunk?";
+        chatStep++;
+    } else if (chatStep === 2) {
+        response = "Rendben. Melyik városba és körülbelül mekkora helyiségbe (nappali, dedikált zeneszoba) tervezi a hangrendszer telepítését?";
+        chatStep++;
+    } else if (chatStep === 3) {
+        response = `Nagyszerű! A leírtak alapján testreszabott prémium megoldásaink ideálisak lesznek. Szeretné megtapasztalni rendszerünket élőben is exkluzív budapesti Showroomunkban?<br><br>
+        Kérem, válassza ki nagyjából, mikor lenne a legalkalmasabb egy zártkörű demóra:
+        <div class="chat-btn-group">
+            <button class="chat-btn" onclick="sendCustomMessage('Ezen a héten')">Ezen a héten</button>
+            <button class="chat-btn" onclick="sendCustomMessage('Jövő hét folyamán')">Jövő hét folyamán</button>
+            <button class="chat-btn" onclick="sendCustomMessage('Később, de érdekel')">Később, de érdekel</button>
+        </div>`;
+        isHtml = true;
+        chatStep++;
+    } else if (chatStep === 4) {
+        response = "Tökéletes! Kérem, adja meg a **telefonszámát és e-mail címét** együttesen egy üzenetben, hogy vezető tanácsadó kollégánk kereshesse az időpont egyeztetése és a rendszer finomhangolása céljából.";
         chatStep++;
     } else {
-        response = "Köszönöm az információkat! A megadott adatokat továbbítottam prémium tanácsadónknak, aki hamarosan felveszi Önnel a kapcsolatot.";
+        response = "Köszönjük a bizalmát! Minden információt sikeresen rögzítettünk. Munkatársunk rövidesen telefonon jelentkezik a részletekkel. Váruk szeretettel bemutatótermünkben!";
     }
     
-    addMessage(response, 'bot');
+    addMessage(response, 'bot', isHtml);
+}
+
+// Function triggered by clicking chat buttons
+function sendCustomMessage(text) {
+    chatInput.value = text;
+    sendChatMessage();
 }
