@@ -23,21 +23,21 @@ const products = {
     'colibri': {
         subtitle: 'AVANTGARDE ACOUSTIC · NÉMETORSZÁG',
         title: 'Colibri C2',
-        image: 'file:///C:/Users/User/.gemini/antigravity/brain/112c6c51-3c48-4f17-b182-ffd2892ca8cd/colibri_speaker_black_1775135257235.png',
+        image: './assets/colibri_speaker_black_1775135257235.png',
         description: 'A német Avantgarde Acoustic 30 éves kürtős technológiáját sűríti kompakt méretbe. 98 dB hatásfok, 117 dB maximális hangnyomás — szférikus kürttel és ultrakönnyű meghajtókkal. Az érzelem és a dinamika megtestesítője.',
         specs: '2 utas kürtös rendszer · 70–19 000 Hz · 98 dB hatásfok · 117 dB max SPL · 18,5 kg'
     },
     'amphion': {
         subtitle: 'AMPHION · FINNORSZÁG',
         title: 'Krypton3X',
-        image: 'file:///C:/Users/User/.gemini/antigravity/brain/112c6c51-3c48-4f17-b182-ffd2892ca8cd/colibri_speaker_lifestyle_1775135270632.png',
+        image: './assets/colibri_speaker_lifestyle_1775135270632.png',
         description: 'A finn Amphion hangfalak páratlan tisztaságukról és természetes terükről ismertek. Skandináv eleganciájukkal bármely modern nappali díszeivé válnak, miközben felesleges színezés nélkül adják vissza a zene eredeti lelkét.',
         specs: '3 utas rendszer · 21–25 000 Hz · 89 dB hatásfok · Kardioid hangzásképzés · 72 kg'
     },
     'dls': {
         subtitle: 'DLS · SVÉDORSZÁG',
         title: 'Flatbox XL',
-        image: 'file:///C:/Users/User/.gemini/antigravity/brain/112c6c51-3c48-4f17-b182-ffd2892ca8cd/high_end_amplifier_1775135299041.png',
+        image: './assets/high_end_amplifier_1775135299041.png',
         description: 'Falra szerelhető, minimalista dizájnú hangszóró — szinte láthatatlanul simul az otthonába. Kettő darab 4 colos mélyközép meghajtó és 30 mm-es szövet magassugárzó biztosítja a gazdag, részletgazdag hangzást zenéhez és házimozi rendszerekhez egyaránt.',
         specs: '2x4" meghajtó · 30mm tweeter · 65-25 000 Hz · 89 dB · Falra szerelhető'
     }
